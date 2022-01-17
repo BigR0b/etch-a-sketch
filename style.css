@@ -1,0 +1,12 @@
+.sketchContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+}
+
+.tiles{
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+}
