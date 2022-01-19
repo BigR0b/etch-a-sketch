@@ -1,12 +1,13 @@
 .sketchContainer{
-    display: flex;
-    flex-wrap: wrap;
-    width: 400px;
-    height: 400px;
+    display: grid;
+    width: 450px;
+    height: 450px;
+    background-color: blanchedalmond;
+}
+h1{
+    background-color: darkgray;
 }
 
 .tiles{
-    width: 20px;
-    height: 20px;
-    border: 2px solid black;
+    border: 1px solid royalblue;
 }
