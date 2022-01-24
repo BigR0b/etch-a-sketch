@@ -2,12 +2,11 @@
     display: grid;
     width: 450px;
     height: 450px;
-    background-color: blanchedalmond;
+    background-color: white;
 }
 h1{
     background-color: darkgray;
 }
-
-.tiles{
-    border: 1px solid royalblue;
+body{
+    background-color: thistle;
 }
