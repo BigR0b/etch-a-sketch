@@ -37,12 +37,13 @@ function rainbowPen() {
     this.style.backgroundColor = rgb;
 }
 function grayscalePen() {
+    let opacity = .1;
     this.style.backgroundColor = "black";
-    let opacity = this.style.opacity += .1;
-    // if (opacity < 1) {
-    //     opacity += 0.1;
-    // }
-
+    if (this.style.opacity) {
+        this.style.opacity = opacity +.1;
+    }else{
+        this.style.opacity = opacity;
+    }
 }
 //Rainbow Button
 const rainbowButton = document.getElementById("rainbow");
@@ -53,7 +54,7 @@ rainbowButton.addEventListener("click" ,() => {
     gridRow = sketchContainer.style.gridTemplateRows = `repeat(${girdSize}, 1fr)`;
     gridColumn = sketchContainer.style.gridTemplateColumns = `repeat(${girdSize}, 1fr)`;
     addTiles(blockAmount, rainbowPen);
-})
+});
 //Grayscale Button
 
 
