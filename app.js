@@ -49,6 +49,12 @@ function clearTable() {
     gridColumn = sketchContainer.style.gridTemplateColumns = `repeat(${girdSize}, 1fr)`;
 }
 
+//Black Button
+const blackButton = document.getElementById("black");
+blackButton.addEventListener("click", () => {
+    clearTable()
+    addTiles(blockAmount, blackPen); 
+})
 //Rainbow Button
 const rainbowButton = document.getElementById("rainbow");
 rainbowButton.addEventListener("click" ,() => {
