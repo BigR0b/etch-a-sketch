@@ -15,12 +15,6 @@ function addTiles(blockAmount, penColor) {
 }
 addTiles(blockAmount, blackPen);
 
-function deleteTiles() {
-    while (sketchContainer.firstChild) {
-        sketchContainer.removeChild(sketchContainer.firstChild);
-    }
-}
-
 //Hover Colors
 function blackPen() {
     this.style.backgroundColor = "black";
@@ -45,6 +39,12 @@ function grayscalePen() {
         this.style.opacity = .1;
     }
 }
+
+function deleteTiles() {
+    while (sketchContainer.firstChild) {
+        sketchContainer.removeChild(sketchContainer.firstChild);
+    }
+}
 function clearTable() {
     deleteTiles();
     girdSize = girdSize;
@@ -52,6 +52,7 @@ function clearTable() {
     gridRow = sketchContainer.style.gridTemplateRows = `repeat(${girdSize}, 1fr)`;
     gridColumn = sketchContainer.style.gridTemplateColumns = `repeat(${girdSize}, 1fr)`;
 }
+
 //Rainbow Button
 const rainbowButton = document.getElementById("rainbow");
 rainbowButton.addEventListener("click" ,() => {
@@ -67,6 +68,7 @@ grayscaleButton.addEventListener("click" ,() => {
 
 //reset button
 function reset() {
+    girdSize = prompt("chose");
     clearTable()
     addTiles(blockAmount, blackPen);
 }
