@@ -1,5 +1,4 @@
 const sketchContainer = document.querySelector(".sketchContainer");
-const resetButton = document.querySelector("#reset");
 let girdSize = 16;
 let blockAmount = girdSize ** 2;
 let gridRow = sketchContainer.style.gridTemplateRows = `repeat(${girdSize}, 1fr)`;
@@ -18,9 +17,6 @@ addTiles(blockAmount, blackPen);
 //Hover Colors
 function blackPen() {
     this.style.backgroundColor = "black";
-}
-function eraser() {
-    this.style.backgroundColor = "white";
 }
 function rainbowPen() {
     let r = Math.floor(Math.random() * 255);
@@ -67,8 +63,9 @@ grayscaleButton.addEventListener("click" ,() => {
 });
 
 //reset button
+const resetButton = document.querySelector("#reset");
 function reset() {
-    girdSize = prompt("chose");
+    girdSize = document.querySelector("#reset").value;
     clearTable()
     addTiles(blockAmount, blackPen);
 }
